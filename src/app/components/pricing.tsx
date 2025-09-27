@@ -1,13 +1,13 @@
 // components/PricingSection.tsx
 
-import React from 'react';
+import React from 'react'
 
 // Define the Plan type
 interface Plan {
-    name: string;
-    price: string;
-    features: string[];
-    isPopular: boolean;
+    name: string
+    price: string
+    features: string[]
+    isPopular: boolean
 }
 
 // Plan data in Arabic
@@ -47,18 +47,18 @@ const plans: Plan[] = [
         ],
         isPopular: false,
     },
-];
+]
 
 // Card and button styles remain the same
 const cardStyle: React.CSSProperties = {
     background: 'radial-gradient(circle at top, #1d4ed840, transparent 40%), rgb(3 7 18 / 0.5)',
     border: '1px solid rgba(255, 255, 255, 0.08)',
-};
+}
 
 const PricingSection = () => {
     return (
-        <div className="text-white px-4 my-12">
-            <div className="max-w-7xl mx-auto">
+        <div className="my-12 px-4 text-white">
+            <div className="mx-auto max-w-7xl">
                 <div className="mb-4 flex justify-center">
                     <div className="relative inline-block bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-sm font-bold uppercase leading-6 text-transparent">
                         خطط الأسعار
@@ -72,27 +72,36 @@ const PricingSection = () => {
                         .ابدأ رحلتك نحو النجاح اليوم. خطط مرنة مصممة لتلبية احتياجاتك في كل مرحلة من مراحل نموك
                     </p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center mt-20">
-
+                <div className="mt-20 grid grid-cols-1 items-center gap-8 lg:grid-cols-3">
                     {plans.map((plan) => (
                         <div
                             key={plan.name}
-                            className={`rounded-2xl flex flex-col justify-between h-full p-8 relative transition-transform duration-300 ${plan.isPopular ? 'lg:scale-105' : ''
-                                }`}
+                            className={`relative flex h-full flex-col justify-between rounded-2xl p-8 transition-transform duration-300 ${
+                                plan.isPopular ? 'lg:scale-105' : ''
+                            }`}
                             style={{
                                 ...cardStyle,
                                 border: plan.isPopular ? '1px solid #1d4ed8' : cardStyle.border,
                             }}
                         >
                             {plan.isPopular && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-indigo-900 text-white text-xs font-bold px-4 py-1 rounded-full uppercase">
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-900 px-4 py-1 text-xs font-bold uppercase text-white">
                                     الأكثر رواجاً
                                 </div>
                             )}
 
                             <div className="text-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#7587f6" className="h-12 w-12 justify-self-end p-3 rounded mb-4 bg-gradient-to-r from-blue-600 to-indigo-900">
-                                    <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="#7587f6"
+                                    className="mb-4 h-12 w-12 justify-self-end rounded bg-gradient-to-r from-blue-600 to-indigo-900 p-3"
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z"
+                                        clipRule="evenodd"
+                                    />
                                 </svg>
                                 <h4 className="text-xl font-bold text-white">{plan.name}</h4>
                                 <p className="mt-4 text-5xl font-bold tracking-tight text-white">
@@ -123,7 +132,7 @@ const PricingSection = () => {
 
                             <a
                                 href="#"
-                                className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transform-gpu transition-transform duration-200 hover:scale-105 active:scale-95 bg-blue-700 font-bold text-white shadow-2xl shadow-blue-500/50 hover:bg-gray-900 hover:text-blue-600 active:bg-blue-950 active:text-blue-500 h-11 px-8 rounded-full w-full mt-6"
+                                className="mt-6 inline-flex h-11 w-full transform-gpu items-center justify-center gap-2 whitespace-nowrap rounded-full bg-blue-700 px-8 text-sm font-bold text-white shadow-2xl shadow-blue-500/50 ring-offset-background transition-transform duration-200 hover:scale-105 hover:bg-gray-900 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-95 active:bg-blue-950 active:text-blue-500 disabled:pointer-events-none disabled:opacity-50"
                             >
                                 ابدأ الآن
                             </a>
@@ -132,7 +141,7 @@ const PricingSection = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default PricingSection;
+export default PricingSection

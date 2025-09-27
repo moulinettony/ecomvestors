@@ -37,24 +37,37 @@ export default function HeroSection() {
                             </div>
                         </div>
                         <div className="text-center">
-                            <p className="text-right px-8 text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">
-                                إليك خطة محكمة لتحقيق دخل يتراوح بين 20,000€ إلى 50,000€ شهريًا أو أكثر، من خلال التجارة <br className="max-lg:hidden" /> الإلكترونية في أوروبا الشرقية
+                            <p className="px-8 text-right text-sm tracking-normal text-gray-300 lg:pb-6 lg:text-2xl lg:leading-10">
+                                إليك خطة محكمة لتحقيق دخل يتراوح بين 20,000€ إلى 50,000€ شهريًا أو أكثر، من خلال التجارة{' '}
+                                <br className="max-lg:hidden" /> الإلكترونية في أوروبا الشرقية
                             </p>
-                            <p className="text-right px-8 text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
-                                أكثر من 800 عضو • أكثر من 650 منتج رابح • <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent"> متوسط دخل 20,000€ شهريًا </span>
+                            <p className="px-8 text-right text-sm tracking-normal text-gray-300 lg:text-xl lg:leading-10">
+                                أكثر من 800 عضو • أكثر من 650 منتج رابح •{' '}
+                                <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
+                                    {' '}
+                                    متوسط دخل 20,000€ شهريًا{' '}
+                                </span>
                             </p>
-                            <p className="text-right px-8 text-sm tracking-normal text-gray-400 lg:text-xl lg:leading-10">
-                                <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">الخطوة الأولى:</span> شاهد الفيديو واحصل على خصم 50٪<br className='max-lg:hidden' /> هل أنت مستعد للبدء؟ <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">سجّل الآن ↓</span>
+                            <p className="px-8 text-right text-sm tracking-normal text-gray-400 lg:text-xl lg:leading-10">
+                                <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
+                                    الخطوة الأولى:
+                                </span>{' '}
+                                شاهد الفيديو واحصل على خصم 50٪
+                                <br className="max-lg:hidden" /> هل أنت مستعد للبدء؟{' '}
+                                <span className="relative inline-block bg-gradient-to-r from-green-500 to-green-800 bg-clip-text uppercase tracking-normal text-transparent">
+                                    سجّل الآن ↓
+                                </span>
                             </p>
-                            <div className="aspect-w-16 aspect-h-9 max-w-[900px] mx-auto py-8">
+                            <div className="aspect-w-16 aspect-h-9 mx-auto max-w-[900px] py-8">
                                 <Video
                                     className="overflow-hidden rounded-none bg-black py-4  shadow-lg md:rounded-[50px]"
                                     src={EcomvestorsVsl.sources[0].src}
                                     style={{ objectFit: 'cover', border: 'none' }}
                                 />
                             </div>
-                            <p className="max-lg:px-4 text-sm tracking-normal text-gray-200 lg:text-xl lg:leading-10">
-                                اكتشف كيفية بناء عمل تجارة إلكترونية حقيقي بتكلفة منخفضة، تحت إشراف مبتكري نموذج EV. مرحبًا بك في برنامج إيكومفستورس ماستر بروجرام V5
+                            <p className="text-sm tracking-normal text-gray-200 max-lg:px-4 lg:text-xl lg:leading-10">
+                                اكتشف كيفية بناء عمل تجارة إلكترونية حقيقي بتكلفة منخفضة، تحت إشراف مبتكري نموذج EV.
+                                مرحبًا بك في برنامج إيكومفستورس ماستر بروجرام V5
                             </p>
 
                             <h3

@@ -16,7 +16,7 @@ export default function MasterProgram() {
                             'container relative mx-auto my-4 w-full max-w-7xl rounded-3xl px-4 sm:my-10 sm:px-6 md:px-8'
                         )}
                     >
-                       {/* <div className="mb-8 flex justify-center">
+                        {/* <div className="mb-8 flex justify-center">
                             <Link className="flex size-auto items-center justify-start bg-none" href={'/'}>
                                 <Image
                                     src={'/logos/icon-dark-3x.png'}

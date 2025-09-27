@@ -8,12 +8,12 @@ import { FormSchema } from '@/app/components/form'
  * throw an error if it fails, which the main handler will catch.
  */
 async function sendToGoogleSheet(formData: z.infer<typeof FormSchema>) {
-    const webAppUrl = process.env.GOOGLE_SHEET_WEB_APP_URL;
+    const webAppUrl = process.env.GOOGLE_SHEET_WEB_APP_URL
 
     // Check if the URL is configured in your .env file
     if (!webAppUrl) {
-        console.error('FATAL: GOOGLE_SHEET_WEB_APP_URL is not defined.');
-        throw new Error('Server is not configured to accept submissions.');
+        console.error('FATAL: GOOGLE_SHEET_WEB_APP_URL is not defined.')
+        throw new Error('Server is not configured to accept submissions.')
     }
 
     // Send the data
@@ -23,16 +23,16 @@ async function sendToGoogleSheet(formData: z.infer<typeof FormSchema>) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
-    });
+    })
 
     // If the request was not successful, throw an error
     if (!response.ok) {
-        const errorText = await response.text();
-        console.error('Failed to send data to Google Sheet. Response:', errorText);
-        throw new Error('An error occurred while submitting the form.');
+        const errorText = await response.text()
+        console.error('Failed to send data to Google Sheet. Response:', errorText)
+        throw new Error('An error occurred while submitting the form.')
     }
 
-    console.log('Successfully sent data to Google Sheet.');
+    console.log('Successfully sent data to Google Sheet.')
 }
 
 /**
@@ -42,7 +42,7 @@ export const handleSubmit = async (formData: z.infer<typeof FormSchema>) => {
     console.log('Submitting to Google Sheet for:', formData.fullName)
 
     try {
-        await sendToGoogleSheet(formData);
+        await sendToGoogleSheet(formData)
 
         // If the function above completes without errors, return success
         return { status: 'success', message: 'Your submission was received!' }
