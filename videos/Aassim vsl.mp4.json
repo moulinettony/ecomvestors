@@ -1,0 +1,23 @@
+{
+    "status": "ready",
+    "originalFilePath": "videos/Aassim vsl.mp4",
+    "provider": "mux",
+    "providerMetadata": {
+        "mux": {
+            "uploadId": "UgCcGnWslBfxjM5erN3SCFPyWwf53wn02I23bloFqIu8",
+            "assetId": "P1Hpz2N3ICXGaXZweSqt6nmYlVHTWo8YkIOzJrxZJTw",
+            "playbackId": "cWZ8neC3rknl00CI6IYxZV2c029RpuSHQdBFKOu6LGN8E"
+        }
+    },
+    "createdAt": 1730245045111,
+    "updatedAt": 1730245566331,
+    "size": 373285110,
+    "sources": [
+        {
+            "src": "https://stream.mux.com/cWZ8neC3rknl00CI6IYxZV2c029RpuSHQdBFKOu6LGN8E.m3u8",
+            "type": "application/x-mpegURL"
+        }
+    ],
+    "poster": "https://image.mux.com/cWZ8neC3rknl00CI6IYxZV2c029RpuSHQdBFKOu6LGN8E/thumbnail.webp",
+    "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAgAAQAcJYwCdADxGFvpJAAA/vxXGI6FTN0OY54Igsn4q2bQ3WPfjV1gfiPkOS4w6t86Ogg4jG53v2YPwHPb65YVHLyYB8aBy913WNAoAA=="
+}
